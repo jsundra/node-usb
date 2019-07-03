@@ -1,4 +1,5 @@
-var usb = exports = module.exports = require('bindings')('usb_bindings');
+var path = require('path');
+var usb = exports = module.exports = require('bindings')({bindings: 'usb_bindings', module_root: path.resolve(__dirname)});
 var events = require('events')
 var util = require('util')
 
